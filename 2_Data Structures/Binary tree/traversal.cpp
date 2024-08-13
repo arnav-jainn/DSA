@@ -106,11 +106,17 @@ int main(){
     Node*root=createNode();
 
     cout<<"preOrder: "<<endl;
-    preOrderTraversal(root)<<endl;
+    preOrderTraversal(root);
+    cout<<endl;
 
     cout<<"inOrder: "<<endl;
-    inOrder(root)<<endl;
+    inOrder(root);
+    cout<<endl;
 
     cout<<"postOrder: "<<endl;
-    postOrder(root)<<endl;;
+    postOrder(root);
+    cout<<endl;
+
+    cout<<"level: "<<endl;
+    levelOrder(root);
 }
