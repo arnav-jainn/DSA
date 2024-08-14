@@ -88,6 +88,7 @@ void levelOrder(Node*root){
 
     //traversal
     while(!q.empty()){
+
         Node*front=q.front();
         q.pop();
 
@@ -100,8 +101,39 @@ void levelOrder(Node*root){
             q.push(front->right);
         }
     }
+}
+
+
+void level(Node*root){              //print everylevel at diff line 
+    queue<Node*>q;
+    q.push(root);
+    q.push(NULL);
+
+    //traversal
+    while(!q.empty()){
+
+        Node*front=q.front();
+        q.pop();
+
+        if(front==NULL){
+            cout<<endl;
+            if(!q.empty()){             //imp
+            q.push(NULL);
+            }
+        }else{
+            cout<<front->data<<" ";
+
+            if(front->left!=NULL){
+                q.push(front->left);
+            }
+            if(front->right!=NULL){
+                q.push(front->right);
+            }
+        }
+    }
 
 }
+
 int main(){
     Node*root=createNode();
 
