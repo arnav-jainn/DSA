@@ -1,6 +1,3 @@
-//lowest common ancestor of a binary tree
-// LC-236
-
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -17,10 +14,10 @@ public:
         if(root==NULL)
         return NULL;
 
-        if(root->val == p->val)
+        if(root == p)
         return p;
 
-        if(root->val == q->val)
+        if(root== q)
         return q;
 
 
