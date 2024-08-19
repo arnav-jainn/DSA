@@ -33,7 +33,7 @@ public:
 class Solution {
 public:
     int maxDepth(TreeNode* root) {
-            if(root==NULL){
+            if(root==NULL){                 //imp
                 return 0;
             }
         queue<TreeNode*>q;
