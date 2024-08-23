@@ -3,7 +3,7 @@
 using namespace std;
 
 class Node{
-public:
+    public:
     int data;
     Node*left;
     Node*right;
@@ -12,11 +12,12 @@ public:
         this->data=data;
         this->left=NULL;
         this->right=NULL;
-    }
 
+    }
 };
 
-Node*createTree(){
+Node*createNode(){
+    cout<<"enter node value: ";
     int data;
     cin>>data;
 
@@ -24,68 +25,36 @@ Node*createTree(){
         return NULL;
     }
 
-    Node* root = new Node(data);
-
-    root->left=createTree();
-    root->right=createTree();
+    Node*root= new Node(data);
+    cout<<"left"<<root->data;
+    root->left=createNode();
+    cout<<"right"<<root->data;
+    root->right=createNode();
     return root;
 }
 
-void preOrder(Node*root){
-
-    if(root==NULL){
-        return;
-    }
-    
-    //N
-    cout<<root->data;
-
-    //l
-    preOrder(root->left);
-
-    //r
-    preOrder(root->right); 
-}
 
 
-void levelOrder(Node*root){
-    queue<Node*>q;
-    q.push(root);
-
-    while(!q.empty()){
-        Node*front = q.front();
-        q.pop();
-
-        cout<<front->data;
-
-        if(front->left!=NULL){
-            q.push(front->left);
-        }
-        if(front->right!=NULL){
-            q.push(front->right);
-        }
-    }
-
-}
-
-void level(Node*root){
+void level(Node*root){              //print everylevel at diff line 
     queue<Node*>q;
     q.push(root);
     q.push(NULL);
 
+    //traversal
     while(!q.empty()){
-        Node *front = q.front();
-        q.pop();
 
+        Node*front=q.front();
+        q.pop();
 
         if(front==NULL){
             cout<<endl;
-            if(!q.empty()){
-                q.push(NULL);
+            if(!q.empty()){             //imp
+            q.push(NULL);
+            
+            
             }
         }else{
-            
-            cout<<front->data;
+            cout<<front->data<<" ";
 
             if(front->left!=NULL){
                 q.push(front->left);
@@ -95,11 +64,12 @@ void level(Node*root){
             }
         }
     }
+
 }
 
 int main(){
-    Node*root=createTree();
+    Node*root=createNode();
 
-    preOrder(root);
-
+    cout<<"level:"<<endl;
+    level(root);
 }
