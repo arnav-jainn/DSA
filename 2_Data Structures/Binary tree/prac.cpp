@@ -21,6 +21,8 @@ Node*createNode(){
     return root;
 }
 
+// PRETTY CHANGES
+
 
 
 void level(Node*root){              //print everylevel at diff line 
