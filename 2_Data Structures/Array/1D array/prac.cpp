@@ -31,5 +31,5 @@ int main(){
 
     countt(arr,n);
 
-// changes
+// changes  
 }
