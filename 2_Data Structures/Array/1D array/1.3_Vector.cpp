@@ -15,6 +15,16 @@ void print(vector<int>v){
     cout<<endl;
 }
 
+//OR
+
+//TO PRINT A VECTOR
+
+void print(vector<int>v){
+   for(auto it:v){
+      cout<<it;
+   }
+}
+
 int main(){
     vector<int>v;
 
