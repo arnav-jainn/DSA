@@ -34,10 +34,10 @@ int main(){
     brr.push_back(v5);
 
         for(int i=0;i<brr.size();i++){ //row size 
-        for(int j=0;j<brr[i].size();j++){ //size of each rows coloumn
-            cout<<brr[i][j]<<" ";
-        }
+            for(int j=0;j<brr[i].size();j++){ //size of each rows coloumn
+                cout<<brr[i][j]<<" ";
+            }
         cout<<endl;
-    }
+        }
 
 }

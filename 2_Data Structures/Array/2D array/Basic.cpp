@@ -37,7 +37,7 @@ int main(){
     printr(arr,roww,coll);
     printc(arr,roww,coll);
 
-//input in an 2D array
+//input in an 2D array row wise
     int arrr[3][3];
     int row=3;
     int col=3;
@@ -49,4 +49,19 @@ int main(){
         }
     }
    printr(arrr,row,col);
+
+
+//input in an 2D array col wise
+    int arrr[3][3];
+    int row=3;
+    int col=3;
+
+    for(int i=0;i<col;i++){
+        for(int j=0;j<row;j++){
+            cout<<"enter i:"<<i<<"enter j:"<<j<<endl;
+            cin>>arrr[j][i];
+        }
+    }
+   printr(arrr,row,col);
 }
+
