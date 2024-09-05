@@ -20,8 +20,13 @@ int main(){
     char ch[100];
 
     //cin>>ch;
-   cin.getline(ch,100);
+   cin.getline(ch,100);         //Space bhi count honge 
+
    int lengthh=findLength(ch,100);
+
+
+   //or STL function
+//    strlen(ch);
 
    cout<<lengthh;
 }
