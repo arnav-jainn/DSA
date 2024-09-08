@@ -39,7 +39,7 @@ int main(){
     string str2 = "is";
 
 
-    if(str1.find(str2) == string::npos){
+    if(str1.find(str2) == string::npos){            //npos  -> no position
         cout<<"Not found"<<endl;
     }else{
         cout<<"Found"<<endl;
