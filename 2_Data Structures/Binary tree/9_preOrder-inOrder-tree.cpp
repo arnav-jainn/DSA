@@ -18,95 +18,8 @@ class Node{
     }
 };
 
-Node*createNode(){
-    cout<<"enter node value: ";
-    int data;
-    cin>>data;
 
-    if(data==-1){
-        return NULL;
-    }
-
-    Node*root= new Node(data);
-    // cout<<"left"<<root->data;
-    root->left=createNode();
-    // cout<<"right"<<root->data;
-    root->right=createNode();
-    return root;
-}
-
-//PRE ORDER TRAVERSAL
-void preOrderTraversal(Node*root){
-    if(root==NULL){
-        return;
-    }
-    //N L R
-
-    //N
-    cout<< root->data<<" ";
-
-    //L
-    preOrderTraversal(root->left);
-
-    //R
-    preOrderTraversal(root->right);       
-}
-
-//INORDER TRAVERSAL
-void inOrder(Node*root){
-    if(root==NULL){
-        return;
-    }
-    //L N R
-
-    //L
-    inOrder(root->left);
-    //N
-    cout<<root->data<<" ";
-    //R
-    inOrder(root->right);
-}
-
-//POST ORDER TRAVERSAL
-void postOrder(Node*root){
-        if(root==NULL){
-        return;
-    }
-    //L R N
-
-    //L
-    postOrder(root->left);
-    //R
-    postOrder(root->right);
-    //N
-    cout<<root->data<<" ";
-}
-
-//LEVEL ORDER TRAVERSAL
-
-void levelOrder(Node*root){
-    queue<Node*>q;
-    q.push(root);
-
-    //traversal
-    while(!q.empty()){
-
-        Node*front=q.front();
-        q.pop();
-
-        cout<<front->data<<" ";
-
-        if(front->left!=NULL){
-            q.push(front->left);
-        }
-        if(front->right!=NULL){
-            q.push(front->right);
-        }
-    }
-}
-
-
-void level(Node*root){              //print everylevel at diff line 
+void level(Node*root){            
     queue<Node*>q;
     q.push(root);
     q.push(NULL);
@@ -119,7 +32,7 @@ void level(Node*root){              //print everylevel at diff line
 
         if(front==NULL){
             cout<<endl;
-            if(!q.empty()){             //imp
+            if(!q.empty()){          
             q.push(NULL);
             }
         }else{

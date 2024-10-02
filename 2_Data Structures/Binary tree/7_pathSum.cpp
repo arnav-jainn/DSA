@@ -30,9 +30,10 @@ public:
             }else
                 return false;
        }
-            bool leftAns = solve(root->left,targetSum,sum);
-            bool rightAns = solve(root->right,targetSum,sum);
-            return leftAns||rightAns;                           // OR(||) very imp
+
+        bool leftAns = solve(root->left,targetSum,sum);
+        bool rightAns = solve(root->right,targetSum,sum);
+        return leftAns||rightAns;                           // OR(||) very imp
 
     }
 

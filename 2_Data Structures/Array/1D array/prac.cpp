@@ -2,9 +2,10 @@
 
 using namespace std;
 
-
-
-
 int main(){
-    int arr[];
+
+
+    cout<<"hello world";
+    int ans=1+2;
+    cout<<ans;
 }

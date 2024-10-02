@@ -4,18 +4,16 @@
 class Solution {
 public:
     string removeDuplicates(string s) {
-        string temp="";
-        int index=0;
+        int n=s.length();
+            string temp="";
 
-        while(index<s.length()){
-            if(temp.length()>0 && temp.back()==s[index]){
-                temp.pop_back();
-            }else{
-                temp.push_back(s[index]);
-            }
-            index++;
+    for(int i=0;i<n;i++){
+        if(temp.length()>0 && temp.back()==s[i]){
+            temp.pop_back();
+        }else{
+            temp.push_back(s[i]);
         }
-
-        return temp;
+    }
+    return temp;
     }
 };
