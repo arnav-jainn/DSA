@@ -15,7 +15,7 @@ public:
     {
         this->data = data;
         this->left = NULL;
-        this->right = NULL;
+        this->right = NULL; 
     }
 };
 

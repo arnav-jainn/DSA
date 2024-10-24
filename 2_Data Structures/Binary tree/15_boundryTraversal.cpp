@@ -81,12 +81,12 @@ void boundryTraversal(Node*root){
     if(root==NULL){
         return;
     }
-    leftBoundry(root);
-    leafBoundry(root);
-    if(root->right!=NULL){
+    cout<<root->data<" ";
+    leftBoundry(root->left);
+    leafBoundry(root->left);        //ni to single node k case m root 2 baar print hojaega 
+    leafBoundry(root->right);
     rightBoundry(root->right);  
-    }else
-        rightBoundry(root->left);
+  
 }
 
 int main()
